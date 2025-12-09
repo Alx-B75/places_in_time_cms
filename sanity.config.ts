@@ -1,18 +1,17 @@
-import {defineConfig} from 'sanity'
-import {structureTool} from 'sanity/structure'
-import {visionTool} from '@sanity/vision'
-import {schemaTypes} from './schemaTypes'
+import { defineConfig } from "sanity";
+import { deskTool } from "sanity/desk";
+import { schemaTypes } from "./schemaTypes";
 
 export default defineConfig({
-  name: 'default',
-  title: 'Places in Time CMS',
+  name: "default",
+  title: "Places in Time CMS",
 
-  projectId: 'g3z4q74p',
-  dataset: 'production',
+  projectId: "g3z4q74p",
+  dataset: "production",
 
-  plugins: [structureTool(), visionTool()],
+  plugins: [deskTool()],
 
   schema: {
     types: schemaTypes,
   },
-})
+});
