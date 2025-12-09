@@ -8,6 +8,20 @@ export default defineType({
     defineField({ name: "heroTitle", title: "Hero title", type: "string" }),
     defineField({ name: "heroSubtitle", title: "Hero subtitle", type: "text" }),
     defineField({
+      name: "heroImage",
+      title: "Hero image",
+      type: "image",
+      options: { hotspot: true },
+      fields: [
+        defineField({
+          name: "alt",
+          title: "Alt text",
+          type: "string",
+          description: "Short description for screen readers and SEO",
+        }),
+      ],
+    }),
+    defineField({
       name: "heroCtaPrimaryLabel",
       title: "Hero primary CTA label",
       type: "string",
